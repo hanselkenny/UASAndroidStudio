@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductListFragment"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imProductImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:src="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/tvProductId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_toRightOf="@id/imProductImage"/>
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_toRightOf="@id/imProductImage"/>
+    <TextView
+        android:id="@+id/tvTextProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_toLeftOf="@id/tvProductPrice"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tvProductName"/>
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_toRightOf="@id/imProductImage"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tvProductName"/>
+
+
+</RelativeLayout>
