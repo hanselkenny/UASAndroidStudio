@@ -50,20 +50,6 @@ public class CartActivity extends AppCompatActivity implements TransactionListAd
     }
 
     @Override
-    public void onItemAdd(View view, int position) {
-        DatabaseHandler databaseHelper = DatabaseHandler.getInstance(this);
-        ProductTransaction productTransaction = new ProductTransaction();
-        try {
-            productTransaction = databaseHelper.getProduct(position);
-            productTransaction.setmQuantity(Integer.parseInt(productTransaction.getQuantity())+1);
-            databaseHelper.updateProduct(productTransaction);
-        }catch (Exception e)
-        {
-            Log.e("exception", "Error while trying to add transaction to database");
-        }
-    }
-
-    @Override
     public void onItemDecrease(View view, int position) {
         EditText jumlah = (EditText) view.findViewById(R.id.etEditOrderQuantity);
         TextView id = (TextView) view.findViewById(R.id.tvOrderId);

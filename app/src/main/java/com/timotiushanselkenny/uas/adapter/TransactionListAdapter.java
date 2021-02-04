@@ -85,44 +85,8 @@ public class TransactionListAdapter extends RecyclerView.Adapter<TransactionList
             if (mClickListener != null) mClickListener.onItemDecrease(view, getAdapterPosition());
 
         }
-//        ViewHolder(View itemView) {
-//            super(itemView);
-//            myPriceView = itemView.findViewById(R.id.tvOrderProductPrice);
-//            set = itemView.findViewById(R.id.buttonSetQuantity);
-//            //myQuantityView = itemView.findViewById(R.id.orderQuantityDrink);
-//            myDescriptionView = itemView.findViewById(R.id.tvOrderProductDescription);
-//            itemView.setOnClickListener(this);
-//        }
-//        @Override
-//        public void onClick(View view) {
-//            if (mAddClickListener != null) mAddClickListener.onItemAdd(view, getAdapterPosition());
-//        }
 
     }
-//    private class MyCustomEditTextListener implements TextWatcher {
-//        private int position;
-//
-//        public void updatePosition(int position) {
-//            this.position = position;
-//        }
-//
-//        @Override
-//        public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-//            // no op
-//        }
-//
-//        @Override
-//        public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-////            if(!charSequence.toString().isEmpty()){
-////                editQuantity[position]=Integer.parseInt(charSequence.toString());
-////            }
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//
-//        }
-//    }
     // convenience method for getting data at click position
     public ProductTransaction getItem(int id) {
         return mData.get(id);
@@ -135,7 +99,6 @@ public class TransactionListAdapter extends RecyclerView.Adapter<TransactionList
 
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
-        void onItemAdd(View view, int position);
         void onItemDecrease(View view, int position);
     }
 }

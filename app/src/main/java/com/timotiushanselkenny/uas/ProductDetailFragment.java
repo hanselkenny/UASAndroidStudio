@@ -65,14 +65,11 @@ public class ProductDetailFragment extends Fragment {
             public void onResponse(Call<Products> call, Response<Products>
                     response) {
                 int statusCode = response.code();
-//                String a = response.body().getName();
                 Product product = response.body().getProducts().get(0);
                 image = product.getImg().toString();
                 tvName.setText(product.getName());
                 tvDescription.setText(product.getDescription());
                 tvPrice.setText(product.getPrice().toString());
-//                Log.d("Retrofit Get", "Product name " +
-//                        product.getName());
             }
             @Override
             public void onFailure(Call<Products> call, Throwable t) {
@@ -98,12 +95,6 @@ public class ProductDetailFragment extends Fragment {
                 }
             }
         });
-
-//        Product workout = Product;
-//
-//        tvName.setText(workout.getName());
-//        tvDescription.setText(workout.getDescription());
-
     }
 
     @Override
